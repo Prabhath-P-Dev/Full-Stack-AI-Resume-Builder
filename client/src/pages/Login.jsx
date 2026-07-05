@@ -2,6 +2,7 @@ import React from "react";
 import {Lock, Mail, User2Icon} from "lucide-react"
 import { useDispatch } from "react-redux";
 import { login } from "../app/features/authSlice";
+import { register } from "../app/features/authSlice";
 import toast from "react-hot-toast";
 import api from "../configs/api.js"
 
@@ -23,7 +24,12 @@ const Login = () => {
         e.preventDefault()
         try{
           const {data} = await api.post(`/api/users/${state}`, formData)
-          dispatch(login(data))
+          console.log(data)
+          if(state==="login"){
+            dispatch(login(data))
+          }else if(state==="register"){
+            dispatch(register(data))
+          }
           localStorage.setItem('token', data.token)
           toast.success(data.message)
         } catch(error){
