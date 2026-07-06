@@ -136,7 +136,7 @@ const ModernTemplate = ({ data, accentColor }) => {
 										<h3 className="font-semibold text-gray-900">
 											{edu.degree} {edu.field && `in ${edu.field}`}
 										</h3>
-										<p style={{ color: accentColor }}>{edu.institution}</p>
+										<p style={{ color: accentColor }}>{edu.institute}</p>
 										<div className="flex justify-between items-center text-sm text-gray-600">
 											<span>{formatDate(edu.graduation_date)}</span>
 											{edu.gpa && <span>GPA: {edu.gpa}</span>}

@@ -126,7 +126,7 @@ const ClassicTemplate = ({ data, accentColor }) => {
                                     <h3 className="font-semibold text-gray-900">
                                         {edu.degree} {edu.field && `in ${edu.field}`}
                                     </h3>
-                                    <p className="text-gray-700">{edu.institution}</p>
+                                    <p className="text-gray-700">{edu.institute}</p>
                                     {edu.gpa && <p className="text-sm text-gray-600">GPA: {edu.gpa}</p>}
                                 </div>
                                 <div className="text-sm text-gray-600">

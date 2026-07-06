@@ -24,7 +24,6 @@ const Login = () => {
         e.preventDefault()
         try{
           const {data} = await api.post(`/api/users/${state}`, formData)
-          console.log(data)
           if(state==="login"){
             dispatch(login(data))
           }else if(state==="register"){
