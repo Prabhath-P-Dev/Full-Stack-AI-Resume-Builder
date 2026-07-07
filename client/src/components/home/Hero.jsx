@@ -19,10 +19,10 @@ const Hero = () => {
         <>
             <div className="min-h-screen pb-20 ">
                 {/* Navbar */}
-                <nav className="z-50 flex items-center justify-between w-full py-4 px-6 md:px-16 lg:px-24 xl:px-40 text-sm">
-                    <a href="https://prebuiltui.com">
+                <nav className=" z-50 flex items-center justify-between w-full py-4 px-6 md:px-16 lg:px-24 xl:px-40 text-sm">
+                    
                         <h1 className="w-50 text-3xl text-green-600 font-extrabold">ResumeForge<span className="text-red-400 font-extrabold" >.</span></h1>
-                    </a>
+                    
 
                     <div className="hidden md:flex items-center gap-8 transition duration-500 text-slate-800">
                         <a href="#" className="hover:text-green-600 transition">Home</a>
