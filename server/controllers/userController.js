@@ -87,7 +87,7 @@ export const forgotPassword = async (req, res) => {
      user.resetPasswordExpires = Date.now() + 15 * 60 * 1000;
      await user.save();
 
-     const resetUrl = `https://resumeforge-ai-resume-builder-six.vercel.app//reset-password/${resetToken}`;
+     const resetUrl = `https://resumeforge-ai-resume-builder-six.vercel.app/reset-password/${resetToken}`;
 
      await resend.emails.send({
       from:"onboarding@resend.dev",
