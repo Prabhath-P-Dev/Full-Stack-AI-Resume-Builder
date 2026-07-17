@@ -11,6 +11,8 @@ import { setLoading, login } from "./app/features/authSlice";
 import { useEffect } from "react";
 import {Toaster} from "react-hot-toast" 
 import api from "./configs/api.js"
+import ForgotPassword from "./pages/ForgotPasswordPage.jsx";
+import ResetPassword from "./pages/ResetPassword.jsx";
 
 const App = ()=>{
      const dispatch = useDispatch()
@@ -46,6 +48,8 @@ const App = ()=>{
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path="builder/:resumeId" element={<ResumeBuilder />} />
               </Route>
+              <Route path="forgot-password" element={<ForgotPassword/>} />
+              <Route path="reset-password" element={<ResetPassword />} />
               <Route path="view/:resumeId" element={<Preview/>} />
               
            </Routes> 

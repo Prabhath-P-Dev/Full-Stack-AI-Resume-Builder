@@ -5,6 +5,7 @@ import { login } from "../app/features/authSlice";
 import { register } from "../app/features/authSlice";
 import toast from "react-hot-toast";
 import api from "../configs/api.js"
+import { Link } from "react-router-dom";
 
 const Login = () => {
      
@@ -62,7 +63,7 @@ const Login = () => {
                     <input type="password" name="password" placeholder="Password" className="border-none outline-none ring-0" value={formData.password} onChange={handleChange} required />
                 </div>
                 <div className="mt-4 text-left text-indigo-500">
-                    <button className="text-sm" type="reset">Forget password?</button>
+                    <Link to="/forgot-password" className="text-sm" type="reset">Forget password?</Link>
                 </div>
                 <button type="submit" className="mt-2 w-full h-11 rounded-full text-white bg-green-500 hover:opacity-90 transition-opacity">
                     {state === "login" ? "Login" : "Sign up"}
