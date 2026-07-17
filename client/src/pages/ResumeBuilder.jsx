@@ -38,7 +38,7 @@ const ResumeBuilder = ()=>{
         try{
           const {data} = await api.get("/api/resumes/get/" + resumeId, {headers: {Authorization:token}} )
           setResumeData(data.resume)
-          document.title = data.resume.tilte
+          document.title = data.resume.title
         }catch(error){
           console.log(error.message)
         }
