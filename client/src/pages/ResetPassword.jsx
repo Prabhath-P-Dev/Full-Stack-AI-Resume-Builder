@@ -10,7 +10,7 @@ const ResetPassword = () => {
     const [password, setPassword] = useState("")
     const [isLoading, setIsloading]= useState(false)
 
-    const handleChange = () => {
+    const handleChange = (e) => {
         setPassword(e.target.value)
     }
 
