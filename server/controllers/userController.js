@@ -99,7 +99,7 @@ export const forgotPassword = async (req, res) => {
         <p>Hello ${user.name},</p>
         <p>we received a request to reset your password</p>
         <p>
-          <a href="${resetUrl}>">
+          <a href="${resetUrl}">
           Click here to reset your password
           </a>
         </p>
