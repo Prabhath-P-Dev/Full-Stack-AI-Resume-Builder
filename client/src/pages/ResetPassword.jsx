@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../configs/api";
+import { Eye, EyeOff } from "lucide-react";
 
 const ResetPassword = () => {
     const {token} = useParams();
@@ -9,6 +10,7 @@ const ResetPassword = () => {
  
     const [password, setPassword] = useState("")
     const [isLoading, setIsloading]= useState(false)
+    const [showPassword, setShowPassword] = useState(false)
 
     const handleChange = (e) => {
         setPassword(e.target.value)
@@ -36,9 +38,12 @@ const ResetPassword = () => {
         <>
          <div className="flex items-center justify-center min-h-screen">
             <div>
-                <form onSubmit={(e)=>handleSubmit(e)} className="flex flex-col p-2 gap-5 w-[300px]  ">
-                <input className="border border-2 border-gray-700 p-3 " type="password" placeholder="Enter new password" value={password} onChange={handleChange}/>
-                <button className="p-4 bg-green-600 rounded-lg">{isLoading ? "updating..." : "Reset Password"}</button>
+                <form onSubmit={(e)=>handleSubmit(e)} className=" flex flex-col p-2 gap-5 w-[300px]">
+                <div className="relative w-full">
+                <input type={showPassword ? "text" : "password"} className= " w-full border border-2 border-gray-700 p-3 "  placeholder="Enter new password" value={password} onChange={handleChange}/>
+                <button type="button" onClick={()=>setShowPassword(!showPassword)} className="absolute right-3 top-4 -translate-y-0.5">{showPassword ? <EyeOff size={20} color="#6B7280" /> : <Eye size={20} color="#6B7280" />}</button>
+                </div>
+                <button type="submit" className="p-4 bg-green-600 rounded-lg">{isLoading ? "updating..." : "Reset Password"}</button>
                 </form>
             </div>
          </div>
